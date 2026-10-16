@@ -1,22 +1,38 @@
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+exclude = [".git", "__pycache__", "data_analysis_venv", "build", "dist"]
+max-complexity = 12
+
+[tool.autopep8]
+max_line_length = 88
+ignore = ["E501", "W6"]
+in-place = true
+recursive = true
+# aggressive = 2
+
 [tool.poetry]
-name = "project data analisys"
+name = "project-data-analysis"
 version = "0.1.0"
 description = ""
 authors = ["Rozanna <haneulmyon@gmail.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.11"
-numpy = "^1.26.4"
-matplotlib = "^3.8.3"
-pandas = "^2.2.1"
+python = "^3.14"
+numpy = "^2.3"
+matplotlib = "^3.11"
+pandas = "^2.3.3"
 jupyter = "^1.0.0"
-dvc = "^3.48.4"
-tensorboard = "^2.16.2"
-scikit-learn = "^1.4.1.post1"
-
+dvc = "^3.64.0"
+tensorboard = "^2.20"
+scikit-learn = "^1.8.0"
+statsmodels = "^0.15.0"
+seaborn = "^0.13.2"
+flake8 = "^7.4.1"
+autopep8 = "^2.3.2"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-package-mode = false
