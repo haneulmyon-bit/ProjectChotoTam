@@ -5,8 +5,10 @@ from pathlib import Path
 # --- Пути (ROOT = корень репозитория) ---
 ROOT = Path(__file__).resolve().parents[2]
 DATA_RAW = ROOT / "data" / "raw" / "Telco_customer_churn.xlsx"
+DATA_INTERIM = ROOT / "data" / "interim"
 DATA_PROCESSED = ROOT / "data" / "processed"
 FIGURES = ROOT / "reports" / "figures"
+DOCS = ROOT / "docs"
 
 # --- Параметры эксперимента ---
 RANDOM_STATE = 42
